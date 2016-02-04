@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "CLI Data Gem Project"
-date:   2016-02-03 21:28:33 -0800
 categories:
 ---
 
