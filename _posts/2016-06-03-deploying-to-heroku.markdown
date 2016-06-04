@@ -44,7 +44,7 @@ default: &default
   production:
     <<: *default
     database: db/production.sqlite3
-{% endhighlight* %}
+{% endhighlight %}
 
 Changed it to
 {% highlight Ruby %}
@@ -67,7 +67,7 @@ test:
 production:
   <<: *default
   database: db/production
-{% endhighlight* %}
+{% endhighlight %}
 
 Not having deployed a live site on anything, I was having trouble figuring why Heroku was deploying without errors, but everything was failing to load. I forgot to migrate! Since the site is using Heroku as a platform, I needed to prepend the heroku client commands to the usual rake commands
 {% highlight shell %}
