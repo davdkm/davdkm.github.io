@@ -5,7 +5,7 @@ categories:
 ---
 In this post, we'll be going over how to solve the [SQL Library Lab](https://learn.co/lessons/sql-library-lab) found on [Learn.co](http://learn.co). This lab covers writing SQL statements with complex relationships. We're going to be following the structure in the lab, so fork and clone the files. Also keep running the rspec tests included to gauge your progress.
 
-####SECTION 1: SCHEMA.SQL
+#### SECTION 1: SCHEMA.SQL
 Build out the schema for our Fantasy Library database. Setting up the tables is pretty straightforward. We're just creating basic tables with columns and data types outlined by the lab and tests.
 {% highlight sql %}
 CREATE TABLE series (
@@ -44,7 +44,7 @@ CREATE TABLE character_books (
 );
 {% endhighlight %}
 
-####SECTION 2: INSERT.SQL
+#### SECTION 2: INSERT.SQL
 Populate the database with data. You can make up your own, but the SQL statements are going to look something like the code below. The main thing to remember is the syntax for inserting into the table and the order of the columns and values.
 {% highlight sql %}
 INSERT INTO books (id, title, year, series_id) VALUES (1, "Game of Thrones", 1996, 1), (2, "A Clash of Kings", 1998, 1), (3, "A Storm of Swords", 2000, 1), (4, "First Book", 2002, 2), (5, "Second Book", 2003, 2), (6, "Third Book", 2005, 2);
@@ -53,14 +53,14 @@ INSERT INTO character_books (id, book_id, character_id) VALUES (1, 1, 1), (2, 1,
 {% endhighlight %}
 The statement is telling our database to work on the `books` table and match the columns `(id, title, year, series_id)` with the values to be inserted in the same order `(1, "Game of Thrones", 1996, 1)`, and multiple sets of values are comma separated.
 
-####SECTION 3: UPDATE.SQL
+#### SECTION 3: UPDATE.SQL
 Update the species of the last character in the database to "Martian" by writing an update statement in `update.sql` file. Update statements are pretty straightforward as well, just remember the syntax!
 {% highlight sql %}
 UPDATE characters SET species = 'Martian' WHERE characters.id = 8;
 {% endhighlight %}
 What the above statement is selecting the row in the `characters` table, where the `characters.id` is equal to 8 (our last character), and then sets the `species` column value to `'Martian'`
 
-####SECTION 4: QUERYING YOUR DATABASE
+#### SECTION 4: QUERYING YOUR DATABASE
 Check `spec/querying_spec.rb`, complete the tests by writing the appropriate queries to satisfy the queries in the `querying.rb` file. Note that for this section, the database will be seeded with external data so don't expect it to reflect the data you added above. The methods to be called are already named in the ruby file, we just need to write the sql statements that would return the desired values.
 
 Let's break down one of the more complex statements. The method `select_series_title_with_most_human_characters` should be interesting to write. What we'll need is the series title name that has the most human characters across it's books.
