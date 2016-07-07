@@ -4,11 +4,11 @@ title:  "Wat Do?! A Simple Rails App"
 categories:
 ---
 
-##Intro:
+## Intro:
 
 This post is a journal for the process of creating a website in Rails. Some degree of familiarity with Ruby and Rails by the reader is assumed. Our objective is to create a website that utilizes authentication and authorization (and also allow authentication from an outside service). It will also utilize nested resources and routes. For this project, we're going to build a site that can manage events. We want our users to be able to create events that other users can sign up to attend, and tag their own events with tag categories. Some code will be intentionally left out but my full code can be found on my repo, linked at the bottom of this post. Let's get started!
 
-##Getting Started:
+## Getting Started:
 
 First, we create our models and migrations. I use regular old rails generators to create the files with
 
@@ -222,7 +222,7 @@ Modify the User.rb model file to look for or create users from GitHub. You might
 
 {% endhighlight %}
 
-##Building MVC:
+## Building MVC:
 
 Now to build out the rest of the models, views, and controllers. We start by building out the rest of models with the proper association macros
 
@@ -304,7 +304,7 @@ The event class will have a bit more code to help validate attributes and also m
   end
 {% endhighlight %}
 
-#Controllers:
+# Controllers:
 We want anyone who comes to the site to be able to view our site, but only users who are signed in to be able to create and go to events. We can `authorize` actions by defining policies. We can use Pundit to craft these policies in a `app/policies/resource_policy.rb` file. Here's one for our `Event`.
 
 {% highlight ruby %}
@@ -375,7 +375,7 @@ Now, only users who created the `record`, in this case our event, can make chang
   end
 {% endhighlight %}
 
-#Views:
+# Views:
 To finish up this post, I'll include the code for the event views, which utilizes '<%= render @event %>'
 {% highlight ERB %}
 <%= render @event %>
@@ -430,5 +430,5 @@ When `<%= render @events %>` is called, Rails will automagically look in the `ap
 </div>
 {% endhighlight %}
 
-##Conclusion:
+## Conclusion:
 This has been a quick guide to creating a Rails app with authentication and authorization. This post is by no means extensive or complete, but you can find my full repo on [github](https://github.com/davdkm/wat-do).

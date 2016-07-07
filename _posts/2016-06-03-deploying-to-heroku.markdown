@@ -4,12 +4,12 @@ title:  "Deploying A Simple Rails App to Heroku"
 categories:
 ---
 
-#The Problem
+# The Problem
 When I'm developing a rails website, my database is usually using SQLite3. It is pretty easy to get up and running and usually is enough for developing small scale apps. However, SQLite3 is not really suited for production environments, i.e. if you want this website out in the world wild web, you going to want a production centric database like Postgres or MySQL. For a small fun website on Heroku, you'll want to convert your app to use Postgres.
 
 I had already connected my app to Heroku, but couldn't get it to deploy because it wasn't cool with using SQLite3.  Here's a overview of my journey to get it working.
 
-#Installing Postgres
+# Installing Postgres
 If you are developing on a Mac, you already have SQLite3 installed. If you don't already have Postgres installed, you'll want to download and install from the [Postgres site](http://postgresapp.com/) if you want to develop with it. The Postgres.app makes installation pretty easy.
 
 Next you'll want to configure your app to use Postgres instead of SQLite. Find the line in your Gemfile in your site's root directory and remove it.
@@ -22,7 +22,7 @@ gem 'pg'    #Add this line
 {% endhighlight %}
 Then run `bundle install`. Now we can start configuring the database to use Postgres.
 
-#Configuring the Database
+# Configuring the Database
 You will need to convert your config/database.yml. Mine looked like this:
 {% highlight Ruby %}
 default: &default

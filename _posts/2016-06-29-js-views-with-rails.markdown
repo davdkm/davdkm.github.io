@@ -6,7 +6,7 @@ categories:
 
 This post details the process of changing my event tracking app to use javascript. The backend will still be handled by rails, but we want to change it so that the index and show views use some ajax to render additional details for an event. In addition, we'd like our views to render without having to use redirects for the create and update actions.
 
-#Active Model Serializer
+# Active Model Serializer
 We're going to use [active model serializer](https://github.com/rails-api/active_model_serializers) to help us convert our data into json objects. Let's add the gem to our Gemfile to make it available to us.
 {% highlight Ruby %}
 gem 'jquery-turbolinks' # works around js loading problems with turbolinks, add it to app manifest with require jquery.turbolinks
@@ -41,10 +41,10 @@ class CommentSerializer < ActiveModel::Serializer
 end
 {% endhighlight %}
 
-#Getting the Controller to Return JSON
+# Getting the Controller to Return JSON
 Now to actually get our rails app to return a string formatted in json we need to change our events controller to spit back json from our events serializer.
 {% highlight Ruby %}
-#EventsController
+# EventsController
 def index
   @events = Event.all
   respond_to do |format|
@@ -86,7 +86,7 @@ comments: [
 // etc,
 {% endhighlight %}
 
-##Getting Views to Use JSON
+## Getting Views to Use JSON
 We want our javascript to be run after the document loads and also between page loads without needing hard refreshes. I elected to go with a combination of document ready and page load functions to achieve this.
 {% highlight javascript %}
 // app/assets/javascript/event.js
@@ -122,7 +122,7 @@ var eventDetail = function() {
 {% endhighlight %}
 The above code hijacks the submit button on the rails form with `class="js-more"`. We can pass the value of the attribute `data-id=` number of the specific button that was pressed using the `this` keyword. Ajax gets called with `$.get()` with the arguments being a restful url that we build with the exact event object we want. When ajax receives a response (json from our serializer), we make some html elements by using js object notation and replace the html with the id `#event-id-detail`. Finally, it removes the button that was used to call the function.
 
-#Creating/Updating Events
+# Creating/Updating Events
 Well that was okay, but we really want to use js objects and maybe use some prototype methods instead of manually writing out the new html elements in our javascript file. I'll use Handlebars to help create html elements a little easier. Download [handlebars.js](http://handlebarsjs.com/) and drop it into your asset pipeline. Let's define our Event constructor
 {% highlight javascript %}
 function Event(attributes) {
