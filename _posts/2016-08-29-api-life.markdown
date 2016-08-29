@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "How is Building APIs a metaphor for life?"
+categories:
+---
+Recently, I built a post rating site for a final project. This site was built to have a front end in AngularJS and a Rails API backend. So, what is an API?
+
+> Application program interface (API) is a set of routines, protocols, and tools for building software applications. An API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components.
+
+So in my project, there are no GUI components being handled by Rails, and all views are handled by angular. Having an API backend allows for versatility and also allows for others to use the site with their own front end
+
+The metaphor for Model View Controller (MVC) we are familiar with is the restaurant. The customer looks over the menu and decides what they' like to eat (views). An order is placed with the wait staff who then converts it to something the kitchen can understand (controller). Then, the kitchen receives the order, recognizes it as a request and creates then serves the necessary resource from the database (model). The food is passed back to the wait staff (controller) and then served back to the customer (view).
+
+With a Rails API, the kitchen has the potential to become a mobile kitchen, like a food truck. In the restaurant, the kitchen only serves requests from the client who visit that restaurant. With API's, the data returned by the kitchen will be formatted in a predictable way via JSON objects. That means any front end that knew how to talk to the API could use the kitchen to order food, and any customer who visited that restaurant would get food from our API kitchen.
+
+We could potentially get many different restaurants being served by one kitchen, each with it's own wait staff and customers.
