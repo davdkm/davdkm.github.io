@@ -1,19 +1,59 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Site settings
-title: Rubynilia
-email: davd.km@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  A blog journaling the bitter sweet road of my Ruby growth.
-baseurl: "" # the subpath of your site, e.g. /blog
-#url: "http://yourdomain.com" # the base hostname & protocol for your site
-#twitter_username:
-github_username: davdkm
+# SEO settings
+title: "Ruby"
+title2: "nilia" # default: ""
+description: "A blog journaling the bitter sweet road of my Ruby growth."
+url: http://davdkm.github.io # site url
+# baseurl: "/thinkspace" # apply repo name if use it under gh-pages branch
+baseurl: null # apply null if repo name is something like username.github.io
+
+google_analytics: UA-XXXXX-XX
+repo: http://github.com/heiswayi/thinkspace
+disqus_shortname: "davdkm"
+twitter_username: "davd_km"
+comments: true
+
 
 # Build settings
-markdown: kramdown
+permalink   : /:year/:title/
+markdown    : kramdown
+highlighter : rouge
+
+source: ./
+destination: ./_site
+
+# Sass configuration
+sass:
+  sass_dir: assets/scss
+  style: compressed # expanded
+
+# Author settings
+author:
+  name     : "David Kim"
+  job      : "Full Stack Web Developer"
+  bio      : "A student enrolled in the Flatiron School's - Learn.co Full Stack Web Development program."
+  thumb    : /images/author.jpg
+  email    : davd.km@gmail.com
+  url      : http://davdkm.github.io
+  github   : http://github.com/davdkm
+  twitter  : http://twitter.com/davd_km
+  # facebook : https://www.facebook.com/profile.php?id=1257583160
+  linkedin : http://linkedin.com/in/david-kim
+
+# social settings
+og_locale: "en_US"
+twitter_card: "summary_large_image"
+twitter_site: "@davd_km"
+
+gems:
+  - bourbon
+  - jekyll-paginate
+
+# navbar pages
+navbar:
+  - slug : about
+    title: About
+  - slug : blog
+    title: Blog
+
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
