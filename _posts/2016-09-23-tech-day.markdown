@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Tech Day LA"
+categories:
+---
+Yesterday I attended an open to the public convention called [Tech Day LA](https://techdayhq.com/los-angeles). This is where a bunch of startups gather to show off their products to the general public, developers, and most importantly to potential investors. One trend that I saw amongst the startups is that most consumer facing startups are mobile based, while business facing startups focused more on outsourcing development or management or providing various marketing services.
+
+The number of outsourcing startups was kind of surprising. Many of them offer a service that pairs developers with companies seeking help on projects. Perhaps a new kind of career will emerge where developers no longer work in house for companies and compete per project. It certainly seems there will be more itinerant developers that can work without being rooted in one place for too long.
+
+As for myself, I don't know if that kind of career is right for me yet. I certainly would enjoy the freedom of selecting my own projects and the variety that not having to work in the same office day in and day out. But it also introduces a lot uncertainty. I think as I gain more experience, it could definitely be a viable career path, but for now, it may be best to get into a stable position under the guidance of experienced developers to learn from.
