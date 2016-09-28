@@ -10,6 +10,8 @@ I've been learning to program in Ruby and developing web applications since late
 
 Here's what I've been working on so far!
 
+**Projects**
+
 [Whats Good](https://www.youtube.com/watch?v=bML7nIX2ltg) - [github](https://github.com/davdkm/whats-good) - A simple app that rates posts. Post content and rating other people's posts. Front end built with AngularJS and back end Rails serving JSON.
 
 [Wat Do](http://wat-do-app.herokuapp.com/) - [github](https://github.com/davdkm/wat-do) - A Rails app that helps manage events. Bulit in Rails 4 and JQuery, and github Omniauth
