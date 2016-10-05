@@ -5,7 +5,7 @@ categories:
 ---
 Recently when deploying one of [my projects](https://whats-good.herokuapp.com/) to heroku, I came across a problem. Half of my site wasn't working. Specifically, all the links to my site that connected to the backend end were not being routed properly. It took me an obscenely long amount of time and a lot of trial and error to finally arrive at the actual problem.
 
-####Minification
+#### Minification
 I built my project to be a single page app with an AngularJS front end with a Rails API back end. Angular controllers under go something called minification when the website is deployed in a production environment. This helps to reduce file sizes so resources load faster in live environments by renaming long variable names. So the following
 {% highlight js %}
 function add(numberOne, numberTwo) {
@@ -66,7 +66,7 @@ angular
   .module('app')
   .controller('PostsController', PostsController)
 {% endhighlight %}
-####The Solution: Safe Dependency Injection
+#### The Solution: Safe Dependency Injection
 The solution to get around this is to properly use the `$inject` function to tell angular that we are expecting our dependencies in a specific order. The order here is all that matters, we can name it whatever we'd like i.e.
 {% highlight js %}
 function PostsController(random, variables, foobar) {
