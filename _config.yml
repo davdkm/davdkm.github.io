@@ -31,8 +31,8 @@ sass:
 author:
   name     : "David Kim"
   job      : "Full Stack Web Developer"
-  bio      : "A student enrolled in the Flatiron School's - Learn.co Full Stack Web Development program."
-  thumb    : /images/author.jpg
+  bio      : "A graduate of the Flatiron School's / Learn.co Full Stack Web Development program."
+  thumb    : /assets/images/thumbnail/author.png
   email    : davd.km@gmail.com
   url      : http://davdkm.github.io
   github   : http://github.com/davdkm
