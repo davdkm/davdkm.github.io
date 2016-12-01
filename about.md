@@ -16,4 +16,4 @@ Here's what I've been working on so far!
 
 [Wat Do](http://wat-do-app.herokuapp.com/) - [github](https://github.com/davdkm/wat-do) - A Rails app that helps manage events. Bulit in Rails 4 and JQuery, and github Omniauth
 
-[Aks Me](https://www.youtube.com/watch?v=9nOw1GniiUg) - [github](https://github.com/davdkm/aks-me) - A question and answer site built with Sinatra.
+[Aks Me](https://aks-me.herokuapp.com) - [github](https://github.com/davdkm/aks-me) - A question and answer site built with Sinatra.
